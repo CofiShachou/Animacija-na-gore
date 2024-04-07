@@ -1,0 +1,131 @@
+.icon-before::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon-after::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    outline: 0px;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+body {
+    background-color: var(--boja3);
+    --boja1: #534859;
+    --boja2: #FBF0E8;
+
+    --boja3: #FBD0D0;
+    --boja4: #F9688D;
+
+    margin: 0.1px;
+    overflow-x: hidden;
+}
+
+.hero{
+    display: grid;
+    position: absolute;
+    top: 0%;
+    grid-template-columns: 5vw 30vw 30vw 30vw 5vw;
+    grid-template-rows: 100vh 100vh 100vh 100vh 100vh;
+    transition-duration: 1s;
+}
+.hero div{
+    background-color: black;
+    border-right: 1px solid white;
+    
+}
+.c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.naslov{
+    color: white;
+    font-size: 50px;
+    letter-spacing: 30px;
+    animation: fadein 2s forwards 1s,fadeout 0.5s forwards 4s;
+    opacity: 0;
+}
+.naslov::before{
+    content:'';
+    position: absolute;
+    background-color: white;
+    width: 0px;
+    height: 5px;
+    top: 55%;
+    animation: slide 2s forwards 2s;
+}
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeout {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes slide {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 180px;
+    }
+}
+
+.jedan,.pet{
+    position: relative;
+    top: 0%;
+    width: 5vw;
+    /* height: 100vw; */
+    transition-duration: 1s;
+}
+.dva, .tri, .cetri{
+    position: relative;
+    top: 0%;
+    width: 30vw;
+    /* height: 100vw; */
+    transition-duration: 1s;
+}
+.jedan{
+    z-index:5;
+}
+.dva{
+    z-index:4;
+}
+.tri{
+    z-index:3;
+}
+.cetri{
+    z-index:2;
+}
+.cetri{
+    z-index:1;
+}
